@@ -59,7 +59,6 @@ namespace GraMemory
             this.label2.Size = new System.Drawing.Size(100, 35);
             this.label2.TabIndex = 1;
             this.label2.Text = "Punkty:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblCzasWartośc
             // 
