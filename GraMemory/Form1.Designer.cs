@@ -29,12 +29,15 @@ namespace GraMemory
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblCzasWartośc = new System.Windows.Forms.Label();
             this.lblPunktyWartośc = new System.Windows.Forms.Label();
             this.lblSTartInfo = new System.Windows.Forms.Label();
             this.panelGry = new System.Windows.Forms.Panel();
+            this.timerZakrywacz = new System.Windows.Forms.Timer(this.components);
+            this.timerCzasGry = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -95,6 +98,16 @@ namespace GraMemory
             this.panelGry.Size = new System.Drawing.Size(1149, 506);
             this.panelGry.TabIndex = 7;
             // 
+            // timerZakrywacz
+            // 
+            this.timerZakrywacz.Interval = 3000;
+            this.timerZakrywacz.Tick += new System.EventHandler(this.timerZakrywacz_Tick);
+            // 
+            // timerCzasGry
+            // 
+            this.timerCzasGry.Interval = 1000;
+            this.timerCzasGry.Tick += new System.EventHandler(this.timerCzasGry_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,6 +134,8 @@ namespace GraMemory
         private System.Windows.Forms.Label lblPunktyWartośc;
         private System.Windows.Forms.Label lblSTartInfo;
         private System.Windows.Forms.Panel panelGry;
+        private System.Windows.Forms.Timer timerZakrywacz;
+        private System.Windows.Forms.Timer timerCzasGry;
     }
 }
 
